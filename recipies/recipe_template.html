@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Chocolate Chip Cookies - Farm Recipe Template</title>
+    <link rel="stylesheet" href="../css/recipeCard.css">
+	<script src="../js/recipeCard.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Recipe Header -->
+            <header class="recipe-header">
+                <h1 class="recipe-title">Classic Chocolate Chip Cookies</h1>
+                <p class="recipe-subtitle">Fresh from our farmhouse kitchen, made with love</p>
+            </header>
+
+            <!-- Recipe Meta Information -->
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Total Time</div>
+                    <div class="meta-value">27 mins</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Servings</div>
+                    <div class="meta-value" id="servings">24 cookies</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Difficulty</div>
+                    <div class="meta-value">Easy</div>
+                </div>
+            </div>
+
+            <!-- Recipe Image -->
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Classic Chocolate Chip Cookies" class="recipe-image">
+
+            <!-- Description -->
+            <div class="recipe-description">
+                These classic chocolate chip cookies have been a family favorite on our farm for generations. Made with farm-fresh eggs and the finest ingredients, they're crispy on the edges and delightfully chewy in the center. Perfect for sharing with neighbors or enjoying with a glass of fresh milk from our cows.
+            </div>
+
+            <!-- Scale Calculator -->
+            <div class="scale-calculator">
+                <h3>Recipe Scaler</h3>
+                <div class="scale-controls">
+                    <label for="scale-factor">Scale recipe by:</label>
+                    <input type="number" id="scale-factor" class="scale-input" value="1" min="0.5" max="5" step="0.5">
+                    <button class="btn btn-secondary" onclick="scaleRecipe()">Update Recipe</button>
+                    <button class="btn btn-secondary" onclick="resetScale()">Reset</button>
+                </div>
+            </div>
+
+            <!-- Ingredients Section -->
+            <section class="ingredients-section">
+                <h2 class="section-title">Fresh Ingredients</h2>
+                <ul class="ingredients-list" id="ingredients-list">
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">2¼</span> cups all-purpose flour</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">1</span> tsp baking soda</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">1</span> tsp sea salt</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">1</span> cup farm butter, softened</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">¾</span> cup granulated sugar</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">¾</span> cup packed brown sugar</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">2</span> large farm-fresh eggs</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">2</span> tsp pure vanilla extract</span>
+                    </li>
+                    <li class="ingredient-item" onclick="toggleIngredient(this)">
+                        <input type="checkbox" class="ingredient-checkbox">
+                        <span class="ingredient-text"><span class="amount">2</span> cups premium chocolate chips</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Instructions Section -->
+            <section class="instructions-section">
+                <h2 class="section-title">Cooking Instructions</h2>
+                <div class="instructions-list">
+                    <div class="instruction-item">
+                        Preheat your oven to 375°F (190°C). Line baking sheets with parchment paper or lightly grease them with farm butter.
+                    </div>
+                    <div class="instruction-item">
+                        In a medium bowl, whisk together flour, baking soda, and sea salt. Set aside this dry mixture.
+                    </div>
+                    <div class="instruction-item">
+                        In a large mixing bowl, cream together the softened butter, granulated sugar, and brown sugar until light and fluffy, about 3-4 minutes with an electric mixer.
+                    </div>
+                    <div class="instruction-item">
+                        Beat in the farm-fresh eggs one at a time, then add vanilla extract. Mix until well combined and creamy.
+                    </div>
+                    <div class="instruction-item">
+                        Gradually mix in the flour mixture until just combined. Don't overmix - this keeps the cookies tender.
+                    </div>
+                    <div class="instruction-item">
+                        Gently fold in the chocolate chips with a wooden spoon, distributing them evenly throughout the dough.
+                    </div>
+                    <div class="instruction-item">
+                        Drop rounded tablespoons of dough onto prepared baking sheets, spacing them about 2 inches apart for even baking.
+                    </div>
+                    <div class="instruction-item">
+                        Bake for 9-11 minutes, or until edges are golden brown but centers still look slightly underbaked for that perfect chewy texture.
+                    </div>
+                    <div class="instruction-item">
+                        Let cool on baking sheet for 5 minutes, then transfer to a wire rack to cool completely. Enjoy warm with a glass of farm-fresh milk!
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notes Section -->
+            <section class="notes-section">
+                <h3 class="notes-title">Farmhouse Notes</h3>
+                <div class="notes-content">
+                    <p><strong>Storage:</strong> Store in our favorite mason jars for up to 1 week, or freeze in farm-labeled bags for up to 3 months.</p>
+                    <p><strong>Farm Tips:</strong> For extra chewy cookies, slightly underbake them. For crispier cookies, bake 1-2 minutes longer. We love adding a pinch of flaky sea salt on top!</p>
+                    <p><strong>Seasonal Variations:</strong> Try adding chopped walnuts from our trees, different chocolate varieties, or dried berries from our summer harvest.</p>
+                </div>
+            </section>
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="window.print()">Print Recipe</button>
+                <button class="btn btn-secondary" onclick="copyRecipe()">Copy Recipe</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
