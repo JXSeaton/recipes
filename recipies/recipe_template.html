@@ -54,44 +54,45 @@
             <!-- Ingredients Section -->
             <section class="ingredients-section">
                 <h2 class="section-title">Fresh Ingredients</h2>
-                <ul class="ingredients-list" id="ingredients-list">
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">2¼</span> cups all-purpose flour</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">1</span> tsp baking soda</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">1</span> tsp sea salt</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">1</span> cup farm butter, softened</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">¾</span> cup granulated sugar</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">¾</span> cup packed brown sugar</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">2</span> large farm-fresh eggs</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">2</span> tsp pure vanilla extract</span>
-                    </li>
-                    <li class="ingredient-item" onclick="toggleIngredient(this)">
-                        <input type="checkbox" class="ingredient-checkbox">
-                        <span class="ingredient-text"><span class="amount">2</span> cups premium chocolate chips</span>
-                    </li>
-                </ul>
+				<ul class="ingredients-list" id="ingredients-list">
+					<li class="ingredient-item" data-unit="cup" data-type="flour" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">2¼</span> cups all-purpose flour</span>
+					</li>
+					<li class="ingredient-item" data-unit="tsp" data-type="baking_soda" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">1</span> tsp baking soda</span>
+					</li>
+					<li class="ingredient-item" data-unit="tsp" data-type="sea_salt" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">1</span> tsp sea salt</span>
+					</li>
+					<li class="ingredient-item" data-unit="cup" data-type="butter" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">1</span> cup farm butter, softened</span>
+					</li>
+					<li class="ingredient-item" data-unit="cup" data-type="sugar" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">¾</span> cup granulated sugar</span>
+					</li>
+					<li class="ingredient-item" data-unit="cup" data-type="brown_sugar" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">¾</span> cup packed brown sugar</span>
+					</li>
+					<li class="ingredient-item" data-unit="unit" data-type="eggs" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">2</span> large farm-fresh eggs</span>
+					</li>
+					<li class="ingredient-item" data-unit="tsp" data-type="vanilla_extract" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">2</span> tsp pure vanilla extract</span>
+					</li>
+					<li class="ingredient-item" data-unit="cup" data-type="chocolate_chips" onclick="toggleIngredient(this)">
+						<input type="checkbox" class="ingredient-checkbox">
+						<span class="ingredient-text"><span class="amount">2</span> cups premium chocolate chips</span>
+					</li>
+				</ul>
+				<button class="btn btn-secondary" onclick="convertToGrams()">Convert to Grams</button>
             </section>
 
             <!-- Instructions Section -->

@@ -107,3 +107,41 @@ window.addEventListener('beforeprint', function () {
 		item.querySelector('.ingredient-checkbox').checked = false;
 	});
 });
+
+const conversionTable = {
+	flour: { cup: 120, tbsp: 7.5, tsp: 2.5 },
+	sugar: { cup: 200, tbsp: 12.5, tsp: 4.2 },
+	brown_sugar: { cup: 220, tbsp: 13.75, tsp: 4.6 },
+	butter: { cup: 227, tbsp: 14, tsp: 4.7 },
+	chocolate_chips: { cup: 170, tbsp: 10.6, tsp: 3.5 },
+	vanilla_extract: { tsp: 4.2 },
+	baking_soda: { tsp: 4.6 },
+	sea_salt: { tsp: 6 },
+	eggs: { unit: 50 }, // 1 large egg ≈ 50g
+	// Add more as needed
+};
+
+function parseAmount(amountStr) {
+	// Handles fractions like "2¼"
+	if (amountStr.includes('¼')) return parseFloat(amountStr) + 0.25;
+	if (amountStr.includes('½')) return parseFloat(amountStr) + 0.5;
+	if (amountStr.includes('¾')) return parseFloat(amountStr) + 0.75;
+	return parseFloat(amountStr);
+}
+
+function convertToGrams() {
+	document.querySelectorAll('.ingredient-item').forEach(item => {
+		const unit = item.dataset.unit;
+		const type = item.dataset.type;
+		const amountSpan = item.querySelector('.amount');
+		if (!amountSpan) return;
+		const amount = parseAmount(amountSpan.textContent);
+		const conversion = conversionTable[type] && conversionTable[type][unit];
+		if (conversion) {
+			const grams = Math.round(amount * conversion);
+			if (!amountSpan.nextSibling.textContent.includes('g')) {
+				amountSpan.insertAdjacentHTML('afterend', ` <span class="grams">(${grams}g)</span>`);
+			}
+		}
+	});
+}
